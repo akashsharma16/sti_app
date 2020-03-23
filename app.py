@@ -59,12 +59,8 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
             if form.password.data == user.password :
-            #if check_password_hash(user.password, form.password.data):
                 login_user(user)
                 return redirect(url_for('index'))
-
-        #return redirect('/signup')
-        #return '<h1>' + form.email.data + ' ' + form.password.data + '</h1>'
 
     return render_template('login.html', form=form)
 
@@ -73,12 +69,10 @@ def signup():
     form = RegisterForm()
 
     if form.validate_on_submit():
-       #hashed_password = generate_password_hash(form.password.data, method='sha256')
        new_user = User(email=form.email.data, password=form.password.data)
        db.session.add(new_user)
        db.session.commit()
        return redirect('/login')
-        #return '<h1>' + form.confirm_password.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
     
     return render_template('signup.html', form = form)
 
@@ -103,7 +97,6 @@ def index():
 
     else:
         tasks = Todo.query.filter_by(uniq_id=current_user.id).all()
-        #tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template('index.html', tasks=tasks)
 
 
