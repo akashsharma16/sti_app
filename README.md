@@ -11,4 +11,4 @@ Once you enter your signup credentials, you will be redirect to Login page
 
 Now once you LogIn, your todo list will be shown where you can add new todo task, update and delete tasks.
 
-static/css/home-page.png
+![](static/css/home-page.png)
