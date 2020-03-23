@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Log-In Page</title>
+{% endblock %}
+
+{% block body %}
+<h2>Log in</h2>
+<form method="POST" action="{{ url_for('login') }}">
+    {{ form.csrf_token }}
+    {{ form.email.label }}
+    {{ form.email }}
+    <ul>
+    {% for error in form.email.errors %}
+        <li style="color:red;">{{ error }}</li>
+    {% endfor %}
+    </ul>
+    {{ form.password.label }}
+    {{ form.password }}
+    {% for error in form.password.errors %}
+    <ul>
+        <li style="color:red;">{{ error }}</li>
+    {% endfor %}
+    </ul>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
