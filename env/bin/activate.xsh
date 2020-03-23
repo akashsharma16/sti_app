@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/akash/flask_todo/env"
+$VIRTUAL_ENV = r"/home/akash/flask_todo_login/Todolist_with_user_login-logout-signup/env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]

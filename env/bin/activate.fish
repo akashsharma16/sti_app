@@ -57,7 +57,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV '/home/akash/flask_todo/env'
+set -gx VIRTUAL_ENV '/home/akash/flask_todo_login/Todolist_with_user_login-logout-signup/env'
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
