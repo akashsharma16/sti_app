@@ -2,7 +2,7 @@
 
 Host 'app.py' using terminal by typing "python3 app.py"
 
-Now, open chrome and enter "http://127.0.0.1:5000/home" this will redirect to home page where get the option to #Login and #Signup as shown image below:
+Now, open chrome and enter "http://127.0.0.1:5000/home" this link will direct you to home page where you will get the options to #Login and #Signup as shown image below:
 
 ![](images/home-page.png)
 
