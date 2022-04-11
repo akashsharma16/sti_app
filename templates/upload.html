@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Voice Intelligibility Estimator</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Voice Intelligibility Estimator</h1>
+    <br>
+    <h1 style="text-align: center">Upload Wav File</a></h1>
+    <form method="POST" action="/upload" enctype=multipart/form-data>
+        <input type="file" id="cFile" name="cleanSignal">
+        <input type="file" id="dFile" name="degradedSignal">
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
